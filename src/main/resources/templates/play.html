@@ -13,7 +13,7 @@
 	</th:block>
 	<th:block th:unless="${msg}">
 		<p th:text="${quizForm.question}">クイズ内容</p>
-		<form th:action="${/quiz/check}" th:object="${quizForm}" method="POST">
+		<form th:action="@{/quiz/check}" th:object="${quizForm}" method="POST">
 			<input type="hidden" th:field="*{id}">
 			<button name="answer" value="true">〇</button>
 			<button name="answer" value="false">×</button>
