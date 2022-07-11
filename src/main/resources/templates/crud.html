@@ -33,7 +33,7 @@
 	<!--/* ========== ここまで下部エリア ========== */-->
 	<!--/* ▼▼▼ 新規登録時のみ表示 ▼▼▼ */-->
 	<div th:if="${quizForm.newQuiz}" style="margin: 10px">
-		<h3>登録一覧：<a th:href="@{/quiz/plray}">プレイ</a><br></h3>
+		<h3>登録一覧：<a th:href="@{/quiz/play}">プレイ</a><br></h3>
 		<!--/* 削除コメント */-->
 		<p th:if="${delcomplete}" th:text="${delcomplete}" style=color:blue></p>
 		<p th:if="${msg}" th:text="${msg}" style=color:red></p> 
@@ -54,7 +54,7 @@
 				<td th:text="${obj.author}"></td>
 				<!--/* 編集ボタン */-->
 				<td>
-					<form th:action="@{/quiz/{id}(id=${obj.id})" method="GET">
+					<form th:action="@{/quiz/{id}(id=${obj.id})}" method="GET">
 						<input type="submit" value="編集">
 					</form>
 				</td>
