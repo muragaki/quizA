@@ -69,12 +69,13 @@
 		</table>
 		<!--/* △△△クイズが一件でもあれば表示△△△ */-->
 		<!--/* ▼▼▼クイズが一件もない場合表示▼▼▼ */-->
-		<p th:if="@{#lists.isEmpty(list)}">クイズが登録されていません。</p>
+		<p th:if="${#lists.isEmpty(list)}">クイズが登録されていません。</p>
 		<!--/* △△△クイズが一件もない場合表示△△△ */-->
+	</div>
 		<!--/* ▼▼▼新規登録出ない場合表示▼▼▼ */-->
 		<p th:unless="${quizForm.newQuiz}">
 			<a href="#" th:href="@{/quiz}">CRUD画面に戻る</a>
 		</p>
-	</div>
+	
 </body>
 </html>
